@@ -1,0 +1,89 @@
+/* LoginPage.css */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px;
+    background-image: linear-gradient(to right, #f9e5f0, #f1e0d6), 
+    linear-gradient(to bottom, #ffefc8, #ffecd2)
+    radial-gradient(circle, white 20%, transparent 20%) 0 0, 
+    radial-gradient(circle, white 20%, transparent 20%) 50% 50%;
+  }
+  
+  .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+  }
+  
+  .col {
+    flex: 1;
+    min-width: 400px;
+  }
+  
+  img {
+    min-width:80%;
+    max-width: 100%;
+    border-radius: 10px;
+  }
+  
+  form {
+    background-color: #f8f9fa;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-label {
+    font-weight: bold;
+    font-size: 1rem;
+  }
+  
+  input.form-control {
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    padding: 12px;
+    font-size: 1rem;
+    margin-bottom: 15px;
+  }
+  
+  button.btn-primary {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button.btn-primary:hover {
+    background-color: #0056b3;
+  }
+  
+  a {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    display: block;
+    margin-top: 10px;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  p {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #28a745;
+    text-align: center;
+  }
+  
+  a:focus,
+  button:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5);
+  }
+  
