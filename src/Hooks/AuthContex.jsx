@@ -7,7 +7,7 @@ export const AuthContext = createContext();
 function AuthProvider ({children}){
  const [loggedUser,setLoggedUser] = useState();
  const [savedUser, setSavedUser] = useState({})
-
+ 
 useEffect(()=>{
     setSavedUser(JSON.parse(localStorage.getItem('user')))
 },[])
@@ -17,6 +17,7 @@ const login=(email,password)=>{
     if(email == savedUser.email && password == savedUser.password){
         console.log("object")
         setLoggedUser(savedUser);
+        
     }else{
         console.log('Error while login')
     }

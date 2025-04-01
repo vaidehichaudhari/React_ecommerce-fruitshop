@@ -1,17 +1,16 @@
 import React, { useContext } from "react";
+import logo from "../assets/logo.jpg"
 import { Link, useNavigate } from "react-router-dom";
-import { BiToggleLeft, BiToggleRight } from "react-icons/bi";
-import { ThemeContext } from "../Hooks/ThemeContext";
+import { CiLight,CiDark  } from "react-icons/ci";
+
+ import { ThemeContext } from "../Hooks/ThemeContext";
 import { AuthContext } from "../Hooks/AuthContex";
-
-
 const MainNavbar = () => {
 
   const {theme, toggleTheme} = useContext(ThemeContext)
   const {loggedUser, logout,} = useContext(AuthContext)
-console.log(loggedUser,"In navbar")
-
-const navigate = useNavigate();
+  console.log(loggedUser,"In navbar")
+const navigate = useNavigate()
 
 function handleLogout(){
   logout();
@@ -19,12 +18,12 @@ function handleLogout(){
 alert('Logout Success');
 
 }
-
   return (
+    <div className="navbar1">
     <nav className={`navbar navbar-expand-lg ${theme == 'light' ? 'navbar-light bg-light' : 'navbar-dark bg-dark'}`}>
       <div className="container-fluid">
         <a className="navbar-brand" href="#">
-          Navbar
+        <img src={logo} alt="logo" className="logoimg" height={50}/>
         </a>
         <button
           className="navbar-toggler"
@@ -42,7 +41,7 @@ alert('Logout Success');
           id="navbarSupportedContent"
         >
           <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
-            { loggedUser == null ?
+          { loggedUser == null ?
               (<><li className="nav-item">
               <Link to="/login" class="nav-link">
                 Login
@@ -61,17 +60,16 @@ alert('Logout Success');
             </>)
 
             }
-
-
             <li className="nav-item" style={{fontSize:"30px"}}>
-              <button onClick={toggleTheme} className={`${theme == 'light' ? 'customToggleButtonLight' : 'customToggleButtonDark'}`}>
-                {theme == "light" ? <BiToggleLeft /> : <BiToggleRight />}
+              <button onClick={toggleTheme} className= {`${theme == 'light' ? 'customToggleButtonLight' : 'customToggleButtonDark'}` }>
+                {theme == "light" ? <CiLight /> : <CiDark />}
               </button>
               </li>
           </ul>
         </div>
       </div>
     </nav>
+    </div>
   );
 };
 
