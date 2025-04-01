@@ -53,7 +53,7 @@ alert('Logout Success');
               </Link>
             </li>
             </>) : (<>
-              <span>{loggedUser.name}</span>
+              <span> Welcome,{loggedUser.name}</span><br></br>
               <li className="nav-item">
                 <button onClick={handleLogout}>Logout</button>
               </li>

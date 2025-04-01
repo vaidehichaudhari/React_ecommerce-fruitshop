@@ -12,8 +12,8 @@ const CardList = ({ data }) => {
 
   return (
     <div className="container bg-light py-4">
-      <h2 className="text-center mb-4" style={{ fontWeight: "bold" }}>
-        🍏 Fresh Fruits Collection 🍊
+      <h2 className="text-center mb-4" style={{ fontWeight: "bold", color:"purple", fontSize:'40px'}}>
+        Fresh Fruits Collection 
       </h2>
       <div className="row justify-content-center">
         {cards.length > 0 ? (
